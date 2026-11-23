@@ -235,48 +235,43 @@ function oppositeSkin() {
 
 
 
+function resetOperator() {
+  if (operatorTimer) {
+    clearInterval(operatorTimer);
+    operatorTimer = null;
+  }
+
+  if (activeOperator) {
+    activeOperator.style.transform = "";
+    activeOperator.style.zIndex = "";
+    activeOperator.style.backgroundColor = "";
+    activeOperator.style.color = "";
+    activeOperator = null;
+  }
+}
+
 function popOperator(btn) {
   resetOperator();
-
   activeOperator = btn;
-
   btn.style.transform = "scale(1.25)";
   btn.style.zIndex = "10";
   btn.style.transition = "transform 0.15s ease";
 
   if (btn.id !== "=") {
-
     const colors = [
-      "#FF1493",
-      "#00CED1",
-      "#FFD700",
-      "#8A2BE2",
-      "#FF4500",
-      "#00FA9A",
-      "#1E90FF",
-      "#FF69B4"
+      "#FF1493", "#00CED1", "#FFD700", "#8A2BE2",
+      "#FF4500", "#00FA9A", "#1E90FF", "#FF69B4"
     ];
 
-    operatorTimer = setInterval(function() {
-
-      let randomColor =
-        colors[Math.floor(Math.random() * colors.length)];
-
+    operatorTimer = setInterval(function () {
+      let randomColor = colors[Math.floor(Math.random() * colors.length)];
       while (randomColor === lastOperatorColor) {
-        randomColor =
-          colors[Math.floor(Math.random() * colors.length)];
+        randomColor = colors[Math.floor(Math.random() * colors.length)];
       }
-
       lastOperatorColor = randomColor;
-
       btn.style.backgroundColor = randomColor;
-
-      btn.style.color =
-        (randomColor === "#FFD700" || randomColor === "#00FA9A")
-        ? "black"
-        : "white";
-
-    }, 0.1);
+      btn.style.color = (randomColor === "#FFD700" || randomColor === "#00FA9A") ? "black" : "white";
+    }, 100);
   }
 }
 

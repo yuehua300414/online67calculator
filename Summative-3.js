@@ -5,7 +5,7 @@ let activeOperator = null;
 let currentSkin = "normal";
 let currentOperator = "";
 let firstNumber = null;
-let justCalculated = false;
+let justEjaculated = false;
 
 
 

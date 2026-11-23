@@ -1,0 +1,52 @@
+<html>
+<link rel="stylesheet" href="Summative-3.css">
+<script src="Summative-3.js" defer></script>
+<div id="top-left"></div>
+<div id="top-right"></div>
+<div id="bottom-left"></div>
+<div id="bottom-right"></div>
+<button id="blue-skin" onclick="blueSkin(); specialoff()"></button>
+<button id="normal" onclick="normalSkin(); specialoff()"></button>
+<button id="rainbow-skin" onclick="rainbowSkin(); specialoff()"></button>
+<button id="opposite-skin" onclick="oppositeSkin(); specialoff()"></button>
+<button id="schoolwork-skin" onclick="specialTheme()">special</button>
+
+<div id="display-box">
+    <p id="message-display">0</p>
+</div>
+
+<div id="outline-of-the-calculator">
+    <button id="1" class="numberkey" onclick="showMessage(1)">1</button>
+    <button id="2" class="numberkey" onclick="showMessage(2)">2</button>
+    <button id="3" class="numberkey" onclick="showMessage(3)">3</button>
+    <button id="4" class="numberkey" onclick="showMessage(4)">4</button>
+    <button id="5" class="numberkey" onclick="showMessage(5)">5</button>
+    <button id="6" class="numberkey" onclick="showMessage(6)">6</button>
+    <button id="7" class="numberkey" onclick="showMessage(7)">7</button>
+    <button id="8" class="numberkey" /onclick="showMessage(8)">8</button>
+    <button id="9" class="numberkey" onclick="showMessage(9)">9</button>
+    <button id="0" class="numberkey" onclick="showMessage(0)">0</button>
+
+    <button id="." class="others" onclick="showMessage('.')">.</button>
+    <button id="%" class="others" onclick="showMessage('%')">%</button>
+    <button id="+" class="others" onclick="popOperator(this); setOperator('+')">➕</button>
+    <button id="-" class="others" onclick="popOperator(this); setOperator('-')">➖</button>
+    <button id="*" class="others" onclick="popOperator(this); setOperator('*')">✖️</button>
+    <button id="/" class="others" onclick="popOperator(this); setOperator('/')">➗</button>
+    <button id="=" class="others" onclick="calculate()">🟰</button>
+    <button id="back" class="others" onclick="backspace()">🔙 Back</button>
+    <button id="Clear" class="others" onclick="clearDisplay(); clearAnimation()">🆑 Clear</button>
+</div>    
+    <div id="info">
+  MADE BY YU EN HUANG<br>
+  version 1.1<br>
+  name: 67 calculator<br>
+<p>Click <a href="mailto:yuehua30@kas">here</a> to send an email.</p><br>
+    </div>
+<img id="img-1" src="IMG_2200.png">
+<img id="img-2" src="IMG_2257.jpg">
+<img id="img-3" src="Screenshot 2026-11-14 6.30.28 PM.png">
+<img id="img-4" src="Screenshot 2026-11-14 6.19.53 PM.png">
+
+
+</html>

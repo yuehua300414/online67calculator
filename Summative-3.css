@@ -1,177 +1,214 @@
-html{
-  overflow: hidden;
-  zoom: 130%;
+
+html {
+    overflow: hidden;
+    zoom: 130%;
 }
-#outline-of-the-calculator{
-	width: 8cm;
-	height: 15cm;
-	outline-color: black;
-	outline-style: ridge;
-	position: absolute;
-	right: 38%;
-	top: 5%;
-	border-radius: 10px;
+
+#outline-of-the-calculator {
+    width: 8cm;
+    height: 15cm;
+    outline-color: black;
+    outline-style: ridge;
+    position: absolute;
+    right: 38%;
+    top: 5%;
+    border-radius: 10px;
 }
-#display-box{
-	width: 8cm;
-	height: 3cm;
-	outline-color: black;
-	outline-style: ridge;
-	position: absolute;
-	right: 38%;
-	top: 5%;
-	border-radius: 10px;
-	padding-left: 15px;
-	box-sizing: border-box;
-	z-index: 1;
+
+#display-box {
+    width: 8cm;
+    height: 3cm;
+    outline-color: black;
+    outline-style: ridge;
+    position: absolute;
+    right: 38%;
+    top: 5%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
 }
-button{
-	position: absolute;
+
+#message-display {
+    width: 100%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 30px;
+    margin: 10px 0;
+    box-sizing: border-box;
 }
-#Clear{
-	top: 25%;
-	left: 0.5cm;
-	width: 3.5cm;
-	font-size: 35px;
-	background-color: red;
+
+button {
+    position: absolute;
 }
-#back{
-	top: 25%;
-	right: 0.5cm;
-	width: 3.5cm;
-	font-size: 35px;
-	background-color: #f54f02;
+
+#Clear {
+    top: 25%;
+    left: 0.5cm;
+    width: 3.5cm;
+    font-size: 35px;
+    background-color: red;
 }
-button[id="="]{
-	width: 7cm;
-	bottom: 5%;
-	right: 0.5cm;
-	font-size: 25px;
-	background-color: #02f543;
+
+#back {
+    top: 25%;
+    right: 0.5cm;
+    width: 3.5cm;
+    font-size: 35px;
+    background-color: #f54f02;
 }
-button[id="+"]{
-	width: 2cm;
-	top: 43.5%;
-	right: 0.5cm;
-	font-size: 25px;
+
+button[id="="] {
+    width: 7cm;
+    bottom: 5%;
+    right: 0.5cm;
+    font-size: 25px;
+    background-color: #02f543;
 }
-button[id="-"]{
-	width: 2cm;
-	bottom: 15%;
-	right: 0.5cm;
-	font-size: 25px;
+
+button[id="+"] {
+    width: 2cm;
+    top: 43.5%;
+    right: 0.5cm;
+    font-size: 25px;
 }
-button[id="*"]{
-	width: 2cm;
-	top: 43.5%;
-	left: 0.5cm;
-	font-size: 25px;
+
+button[id="-"] {
+    width: 2cm;
+    bottom: 15%;
+    right: 0.5cm;
+    font-size: 25px;
 }
-button[id="/"]{
-	width: 2cm;
-	bottom: 15%;
-	left: 0.5cm;
-	font-size: 25px;
+
+button[id="*"] {
+    width: 2cm;
+    top: 43.5%;
+    left: 0.5cm;
+    font-size: 25px;
 }
-button[id="."]{
-	width: 1cm;
-	bottom: 15%;
-	left: 2.85cm;
-	font-size: 25px;
+
+button[id="/"] {
+    width: 2cm;
+    bottom: 15%;
+    left: 0.5cm;
+    font-size: 25px;
 }
-button[id="%"]{
-	width: 1cm;
-	bottom: 15%;
-	right: 2.85cm;
-	font-size: 25px;
+
+button[id="."] {
+    width: 1cm;
+    bottom: 15%;
+    left: 2.85cm;
+    font-size: 25px;
 }
-button[id="0"]{
-	width: 2cm;
-	top: 43.5%;
-	right: 3cm;
-	font-size: 25px;
+
+button[id="%"] {
+    width: 1cm;
+    bottom: 15%;
+    right: 2.85cm;
+    font-size: 25px;
 }
-button[id="1"]{
-	width: 2cm;
-	top: 52%;
-	left: 0.5cm;
-	font-size: 25px;
+
+button[id="0"] {
+    width: 2cm;
+    top: 43.5%;
+    right: 3cm;
+    font-size: 25px;
 }
-button[id="2"]{
-	width: 2cm;
-	top: 52%;
-	right: 3cm;
-	font-size: 25px;
+
+button[id="1"] {
+    width: 2cm;
+    top: 52%;
+    left: 0.5cm;
+    font-size: 25px;
 }
-button[id="3"]{
-	width: 2cm;
-	top: 52%;
-	right: 0.5cm;
-	font-size: 25px;
+
+button[id="2"] {
+    width: 2cm;
+    top: 52%;
+    right: 3cm;
+    font-size: 25px;
 }
-button[id="4"]{
-	width: 2cm;
-	top: 60%;
-	left: 0.5cm;
-	font-size: 25px;
-}button[id="5"]{
-	width: 2cm;
-	top: 60%;
-	right: 3cm;
-	font-size: 25px;
+
+button[id="3"] {
+    width: 2cm;
+    top: 52%;
+    right: 0.5cm;
+    font-size: 25px;
 }
-button[id="6"]{
-	width: 2cm;
-	top: 60%;
-	right: 0.5cm;
-	font-size: 25px;
+
+button[id="4"] {
+    width: 2cm;
+    top: 60%;
+    left: 0.5cm;
+    font-size: 25px;
 }
-button[id="7"]{
-	width: 2cm;
-	top: 68%;
-	left: 0.5cm;
-	font-size: 25px;
+
+button[id="5"] {
+    width: 2cm;
+    top: 60%;
+    right: 3cm;
+    font-size: 25px;
 }
-button[id="8"]{
-	width: 2cm;
-	top: 68%;
-	right: 3cm;
-	font-size: 25px;
+
+button[id="6"] {
+    width: 2cm;
+    top: 60%;
+    right: 0.5cm;
+    font-size: 25px;
 }
-button[id="9"]{
-	width: 2cm;
-	top: 68%;
-	right: 0.5cm;
-	font-size: 25px;
+
+button[id="7"] {
+    width: 2cm;
+    top: 68%;
+    left: 0.5cm;
+    font-size: 25px;
 }
+
+button[id="8"] {
+    width: 2cm;
+    top: 68%;
+    right: 3cm;
+    font-size: 25px;
+}
+
+button[id="9"] {
+    width: 2cm;
+    top: 68%;
+    right: 0.5cm;
+    font-size: 25px;
+}
+
 #normal {
-  position: absolute;
-  top: 15%;
-  left: 28%;
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid black;
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
 }
-#blue-skin{
-	position: absolute;
-	top: 30%;
-	left: 28%;
-	background-color: blue;
-	width: 50px;
-  height: 50px;
-  border-radius: 50%
+
+#blue-skin {
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
+
 #rainbow-skin {
-		position: absolute;
-		top: 45%;
-		left: 25%;
+    position: absolute;
+    top: 45%;
+    left: 25%;
     width: 100px;
     height: 50px;
     border: none;
     padding: 0;
-
     background: linear-gradient(
         to bottom,
         #FF0000,
@@ -182,89 +219,71 @@ button[id="9"]{
         #4B0082,
         #9400D3
     );
-
     border-radius: 50px 50px 0 0;
-
     -webkit-mask: radial-gradient(
         ellipse 36px 36px at 50% 100%,
         transparent 99%,
         black 100%
     );
-
     mask: radial-gradient(
         ellipse 36px 36px at 50% 100%,
         transparent 99%,
         black 100%
     );
 }
+
 #opposite-skin {
-	position: absolute;
-	top: 60%;
-	left: 26%;
+    position: absolute;
+    top: 60%;
+    left: 26%;
     width: 96px;
     height: 96px;
     border: none;
     border-radius: 50%;
     padding: 0;
-
     background:
-        radial-gradient(
-            circle at 50% 25%,
-            black 0 9px,
-            transparent 10px
-        ),
-        radial-gradient(
-            circle at 50% 75%,
-            #eee 0 9px,
-            transparent 10px
-        ),
-        radial-gradient(
-            circle at 50% 25%,
-            #eee 0 24px,
-            transparent 25px
-        ),
-        radial-gradient(
-            circle at 50% 75%,
-            black 0 24px,
-            transparent 25px
-        ),
-        linear-gradient(
-            to right,
-            #eee 50%,
-            black 50%
-        );
-
+        radial-gradient(circle at 50% 25%, black 0 9px, transparent 10px),
+        radial-gradient(circle at 50% 75%, #eee 0 9px, transparent 10px),
+        radial-gradient(circle at 50% 25%, #eee 0 24px, transparent 25px),
+        radial-gradient(circle at 50% 75%, black 0 24px, transparent 25px),
+        linear-gradient(to right, #eee 50%, black 50%);
     cursor: pointer;
 }
-#schoolwork-skin{
-	position: absolute;
-	left: 26%;
-	top: 80%;
+
+#schoolwork-skin {
+    position: absolute;
+    left: 26%;
+    top: 80%;
 }
-#img-1{
+
+#img-1 {
     width: 13.5%;
     position: absolute;
     top: -50%;
     transition: all 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-#img-2{
+
+#img-2 {
     width: 13.5%;
     position: absolute;
     right: -50%;
     transition: all 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-#img-3{
+
+#img-3 {
     width: 13.5%;
     position: absolute;
     left: -50%;
     transition: all 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-#img-4{
+
+#img-4 {
     width: 13.5%;
     position: absolute;
     bottom: -50%;
     transition: all 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
+
 #info {
     position: absolute;
     top: 80%;
@@ -283,77 +302,77 @@ button[id="9"]{
 }
 
 #top-left {
-  width: 150px;
-  height: 150px;
-  background: red;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: mymove 0.3ms infinite;
-  opacity: 100%;
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: mymove 0.3ms infinite;
+    opacity: 100%;
 }
 
 #top-right {
-  width: 150px;
-  height: 150px;
-  background: green;
-  position: absolute;
-  top: 0;
-  right: 0;
-  animation: mymove2 0.3ms infinite;
-  opacity: 75%;
+    width: 150px;
+    height: 150px;
+    background: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: mymove2 0.3ms infinite;
+    opacity: 75%;
 }
 
 #bottom-right {
-  width: 150px;
-  height: 150px;
-  background: blue;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  animation: mymove3 0.3ms infinite;
-  opacity: 50%;
+    width: 150px;
+    height: 150px;
+    background: blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: mymove3 0.3ms infinite;
+    opacity: 50%;
 }
 
 #bottom-left {
-  width: 150px;
-  height: 150px;
-  background: yellow;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  animation: mymove4 0.3ms infinite;
-  opacity: 25%;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: mymove4 0.3ms infinite;
+    opacity: 25%;
 }
 
-@keyframes mymove{
-	0% {top:1%; left:1%; background:red}
-	25% {top:1%; left:90%; background:orange}
-	50% {top:80%; left:90%; background:yellow}
-	75% {top:80%; left:1%; background:green}
-	100% {top:1%; left:1%; background:blue}
+@keyframes mymove {
+    0% { top: 1%; left: 1%; background: red; }
+    25% { top: 1%; left: 90%; background: orange; }
+    50% { top: 80%; left: 90%; background: yellow; }
+    75% { top: 80%; left: 1%; background: green; }
+    100% { top: 1%; left: 1%; background: blue; }
 }
 
-@keyframes mymove2{
-	0% {top:1%; left:90%; background:red}
-	25% {top:80%; left:90%; background:orange}
-	50% {top:80%; left:1%; background:yellow}
-	75% {top:1%; left:1%; background:green}
-	100% {top:1%; left:90%; background:blue}
+@keyframes mymove2 {
+    0% { top: 1%; left: 90%; background: red; }
+    25% { top: 80%; left: 90%; background: orange; }
+    50% { top: 80%; left: 1%; background: yellow; }
+    75% { top: 1%; left: 1%; background: green; }
+    100% { top: 1%; left: 90%; background: blue; }
 }
 
-@keyframes mymove3{
-	0% {top:80%; left:90%; background:red}
-	25% {top:80%; left:1%; background:orange}
-	50% {top:1%; left:1%; background:yellow}
-	75% {top:1%; left:90%; background:green}
-	100% {top:80%; left:90%; background:blue}
+@keyframes mymove3 {
+    0% { top: 80%; left: 90%; background: red; }
+    25% { top: 80%; left: 1%; background: orange; }
+    50% { top: 1%; left: 1%; background: yellow; }
+    75% { top: 1%; left: 90%; background: green; }
+    100% { top: 80%; left: 90%; background: blue; }
 }
 
-@keyframes mymove4{
-	0% {top:80%; left:1%; background:red}
-	25% {top:1%; left:1%; background:orange}
-	50% {top:1%; left:90%; background:yellow}
-	75% {top:80%; left:90%; background:green}
-	100% {top:80%; left:1%; background:blue}
+@keyframes mymove4 {
+    0% { top: 80%; left: 1%; background: red; }
+    25% { top: 1%; left: 1%; background: orange; }
+    50% { top: 1%; left: 90%; background: yellow; }
+    75% { top: 80%; left: 90%; background: green; }
+    100% { top: 80%; left: 1%; background: blue; }
 }

@@ -122,20 +122,6 @@ function backspace() {
   display.textContent = chars.length > 0 ? chars.join("") : "0";
 }
 
-
-
-function resetOperator() {
-    clearInterval(operatorTimer);
-
-    if (activeOperator) {
-        activeOperator.style.transform = "scale(1)";
-        activeOperator.style.zIndex = "1";
-        activeOperator = null;
-    }
-}
-
-
-
 function blueSkin() {
   clearInterval(rainbowTimer);
   normalSkin();
@@ -320,10 +306,10 @@ function specialoff() {
     document.getElementById("img-2").style.right = "-50%";
     document.getElementById("img-3").style.left = "-50%";
     document.getElementById("img-4").style.bottom = "-50%";
-    document.getElementById("top-left").style.opacity = "-50%";
-    document.getElementById("top-right").style.opacity = "-50%";
-    document.getElementById("bottom-right").style.opacity = "-50%";
-    document.getElementById("bottom-left").style.opacity = "-50%";
+    document.getElementById("top-left").style.opacity = "0%";
+    document.getElementById("top-right").style.opacity = "0%";
+    document.getElementById("bottom-right").style.opacity = "0%";
+    document.getElementById("bottom-left").style.opacity = "0%";
 }
 
 function specialon() {

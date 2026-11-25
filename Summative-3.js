@@ -10,61 +10,50 @@ let justCalculated = false;
 
 
 function setOperator(op) {
-    if (currentOperator !== "" && firstNumber !== null) {
-        calculate();
-    }
+  const display = document.getElementById("message-display");
 
-    firstNumber = Number(document.getElementById("message-display").textContent);
-    currentOperator = op;
+  firstNumber = parseFloat(display.textContent);
+  currentOperator = op;
+  justCalculated = false;
 
-    document.getElementById("message-display").textContent = "0";
-    justCalculated = false;
+  display.textContent = "0";
 }
 
 
 
 
 function calculate() {
-    if (firstNumber === null || currentOperator === "") {
-        return;
-    }
+  const display = document.getElementById("message-display");
+  const secondNumber = parseFloat(display.textContent);
 
-    let secondNumber = Number(document.getElementById("message-display").textContent);
-    let result;
-
-    switch (currentOperator) {
-        case "+":
-            result = firstNumber + secondNumber;
-            break;
-
-        case "-":
-            result = firstNumber - secondNumber;
-            break;
-
-        case "*":
-            result = firstNumber * secondNumber;
-            break;
-
-        case "/":
-            if (secondNumber === 0) {
-                document.getElementById("message-display").textContent = "Error";
-                firstNumber = null;
-                currentOperator = "";
-                justCalculated = true;
-                resetOperator();
-                return;
-            }
-            result = firstNumber / secondNumber;
-            break;
-    }
-
-    document.getElementById("message-display").textContent = String(result);
-
-    firstNumber = null;
-    currentOperator = "";
-    justCalculated = true;
-
+  if (firstNumber === null || currentOperator === "") {
     resetOperator();
+    return;
+  }
+
+  let total;
+
+  if (currentOperator === "+") {
+    total = firstNumber + secondNumber;
+  }
+  else if (currentOperator === "-") {
+    total = firstNumber - secondNumber;
+  }
+  else if (currentOperator === "*") {
+    total = firstNumber * secondNumber;
+  }
+  else if (currentOperator === "/") {
+    total = secondNumber === 0 ? "Error" : firstNumber / secondNumber;
+  }
+
+  display.textContent = total;
+
+  firstNumber = null;
+  currentOperator = "";
+  justCalculated = true;
+
+
+  resetOperator();
 }
 
 

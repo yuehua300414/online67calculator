@@ -10,12 +10,14 @@ let justCalculated = false;
 
 
 function setOperator(op) {
-    if (currentOperator !== "" && firstNumber !== null && !justCalculated) {
+    if (currentOperator !== "" && firstNumber !== null) {
         calculate();
     }
 
     firstNumber = Number(document.getElementById("message-display").textContent);
     currentOperator = op;
+
+    document.getElementById("message-display").textContent = "0";
     justCalculated = false;
 }
 
@@ -27,29 +29,33 @@ function calculate() {
         return;
     }
 
-    const secondNumber = Number(document.getElementById("message-display").textContent);
+    let secondNumber = Number(document.getElementById("message-display").textContent);
     let result;
 
-    if (currentOperator === "+") {
-        result = firstNumber + secondNumber;
-    }
-    else if (currentOperator === "-") {
-        result = firstNumber - secondNumber;
-    }
-    else if (currentOperator === "*") {
-        result = firstNumber * secondNumber;
-    }
-    else if (currentOperator === "/") {
-        if (secondNumber === 0) {
-            document.getElementById("message-display").textContent = "Error";
-            firstNumber = null;
-            currentOperator = "";
-            justCalculated = true;
-            resetOperator();
-            return;
-        }
+    switch (currentOperator) {
+        case "+":
+            result = firstNumber + secondNumber;
+            break;
 
-        result = firstNumber / secondNumber;
+        case "-":
+            result = firstNumber - secondNumber;
+            break;
+
+        case "*":
+            result = firstNumber * secondNumber;
+            break;
+
+        case "/":
+            if (secondNumber === 0) {
+                document.getElementById("message-display").textContent = "Error";
+                firstNumber = null;
+                currentOperator = "";
+                justCalculated = true;
+                resetOperator();
+                return;
+            }
+            result = firstNumber / secondNumber;
+            break;
     }
 
     document.getElementById("message-display").textContent = String(result);
